@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: green
+  /* background-size: 400% 400%;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,36,1) 28%, rgba(0,212,255,1) 50%, rgba(255,130,0,1) 72%, rgba(2,0,36,1) 100%);
+  color: aliceblue;
+  animation: gradient 15s ease infinite; */
+}
+
+img {
+  height: 100%;
+}
+
+#wedForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+
+}
+
+#wedForm > input {
+  margin-bottom: 20px;
+  width: 50%;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid aquamarine;
+  margin-top: 10px;
+}
+
+#wedForm > button {
+  height: 40px;
+  width: 100px;
+  outline: none;
+  border-radius: 4px;
+  border-style: unset;
+  font-size: 18px;
+}
+
+/* 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */
