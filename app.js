@@ -21,6 +21,10 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + '/public/index.html')
 });
 
+app.get('/hola', (req, res) => {
+  res.send('buenas')
+})
+
 // Define route handler for form submission
 app.post('/submit-wedding-form', async (req, res) => {
   try {
