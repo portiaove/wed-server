@@ -16,10 +16,10 @@ img {
 }
 
 .saveTheDate {
-  /* aspect-ratio: 2/3;
+  /* aspect-ratio: 2/3; */
   object-fit: none;
   object-position: 59% 0;
-  min-height: 277vh; */
+  min-height: 277vh;
 }
 
 .content {
