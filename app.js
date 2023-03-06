@@ -18,7 +18,7 @@ const sheets = google.sheets({ version: 'v4', auth });
 
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + '/public/index.html')
+  res.sendFile(__dirname + '/public/')
 });
 
 app.get('/hola', (req, res) => {
