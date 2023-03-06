@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "wed-server",
   "builds": [
     { "src": "app.js", "use": "@vercel/node" }
   ],
