@@ -11,18 +11,55 @@ h1 {
   margin: 0;
 }
 
-img {
-  width: 100%;
+
+/* Greetings */
+.greetings {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
-.saveTheDate {
-  /* aspect-ratio: 2/3; */
-  object-fit: none;
-  object-position: 59% 0;
-  min-height: 277vh;
+.greetings > button {
+  height: 40px;
+
+  position: absolute;
+  bottom: 10%;
+  left: 51%;
+
+  font-size: 24px;
+  color: #4b3214;
+
+  background-color: #e3e5e4;
+  border: 1px solid #4b3214;
 }
 
-.content {
+.greetings > img {
+  height: 100%;
+}
+
+@media only screen and (min-width: 660px) {
+  .greetings {
+    display: block;
+    height: 100%;
+  }
+  
+  .greetings > button {
+    width: 14%;
+    left: 50%
+  }
+
+  .greetings > img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* Greetings */
+
+
+/*.content {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -57,7 +94,7 @@ img {
   border-radius: 4px;
   border-style: unset;
   font-size: 18px;
-}
+} */
 
 /* 
 @keyframes gradient {
