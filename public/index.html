@@ -10,12 +10,18 @@
 <body>
 
 
-  <div class="greetings" >
+  <div id="greetings" >
     <img src="./assets/saveTheDate2500.webp" alt="">
-    <button>Entrar</button>
+    <button onclick="welcome()">Entrar</button>
   </div>
 
 
+  <main id="home">
+    <img src="./assets/invitacion2500.webp" alt="" > 
+  </main>
+
+
+  
 
   <!-- <div class="content">
     <h1>Hola muy buenas</h1>
@@ -31,8 +37,7 @@
       <input type="text" name="bus" id="bus">
       <button type="submit">Enviar</button>
     </form>
-  </div>
-  <img src="./assets/invitacion2500.webp" alt="" > -->
+  </div>-->
 
 
 
@@ -40,7 +45,12 @@
 
   <script>
 
-    
+    const welcome = () => {
+      const greetings = document.getElementById('greetings')
+      const home = document.getElementById('home')
+      greetings.style.display = 'none'
+      home.style.display = 'block'
+    }
 
     const form = document.querySelector('#wedForm')
     form.addEventListener('submit', async (event) => {
