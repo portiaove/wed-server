@@ -11,9 +11,18 @@ h1 {
   margin: 0;
 }
 
+button {
+  font-size: 22px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: hidden;
+  outline: none;
+}
+
 
 /* Greetings */
-#greetings {
+.greetings {
   height: 100vh;
   overflow-x: hidden;
   position: relative;
@@ -21,42 +30,101 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-#greetings > button {
-  height: 40px;
-  position: absolute;
-  bottom: 10%;
-  left: 51%;
-  font-size: 24px;
-  color: #4b3214;
-  background-color: #e3e5e4;
-  border: 1px solid #4b3214;
+.btn-welcome {
+  display: none;
 }
-#greetings > img {
+#img-savethedate {
   height: 100%;
 }
+
+#img-invitation {
+  display: none;
+  width: 100%;
+}
+
+.nav {
+  position: absolute;
+  bottom: 0;
+  left: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 45%;
+}
+
+.nav > button {
+  border-bottom: 1px solid black;
+}
+
+
+.modal {
+  display: none;
+  justify-content: center;
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #9b9194;
+}
+
+.modal-content {
+  display: none;
+  max-width: 660px;
+  margin: 20px;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.modal-content > .header {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-content > .header > .close {
+  font-size: 50px;
+  padding: 0 12px;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 385px) {
+  .nav {
+    left: 45%;
+  }
+}
+
 @media only screen and (min-width: 660px) {
-  #greetings {
+  .greetings {
     display: block;
     height: 100%;
   } 
-  #greetings > button {
+  .btn-welcome {
+    display: block;
+    height: 40px;
     width: 14%;
-    left: 50%
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    font-size: 24px;
+    color: #4b3214;
+    background-color: #e3e5e4;
+    border: 1px solid #4b3214;
   }
-  #greetings > img {
+  #img-savethedate {
     width: 100%;
     height: auto;
   }
 }
-/* Greetings */
 
-#home {
-  display: none
-}
 
-#home > img {
-  width: 100%;
-}
 
 /*.content {
   height: 100vh;

@@ -10,14 +10,21 @@
 <body>
 
 
-  <div id="greetings" >
-    <img src="./assets/saveTheDate2500.webp" alt="">
-    <button onclick="welcome()">Entrar</button>
-  </div>
+  <main class="greetings" >
+    <img id="img-savethedate" src="./assets/saveTheDate2500.webp" alt="">
+    <img id="img-invitation" src="./assets/invitacion2500.webp" alt="" > 
+
+    <button class="btn-welcome" onclick="welcome(event)">Entrar</button>
+
+    <div class="nav">
+      <button value="0" onClick="openModal(event)">RSVP</button>
+      <button value="1" onClick="openModal(event)">Info</button>
+      <button value="2" onClick="openModal(event)">Otra Info?</button>
+    </div>
+  </main>
 
 
   <main id="home">
-    <img src="./assets/invitacion2500.webp" alt="" > 
   </main>
 
 
@@ -40,16 +47,84 @@
   </div>-->
 
 
+  <div class="modal">
+    <div class="modal-content">
+      <div class="header">
+        <h1>RSVP</h1>
+        <button value="0" class="close" onclick="closeModal(event)">&times;</button>
+      </div>
+      <div class="body">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+      </div>
+    </div>
+    <div class="modal-content">
+      <div class="header">
+        <h1>Info</h1>
+        <button value="1" class="close" onclick="closeModal(event)">&times;</button>
+      </div>
+      <div class="body">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+      </div>
+    </div>
+    <div class="modal-content">
+      <div class="header">
+        <h1>Otra Info?</h1>
+        <button value="2" class="close" onclick="closeModal(event)">&times;</button>
+      </div>
+      <div class="body">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+      </div>
+    </div>
+  </div>
 
 
 
   <script>
 
+    const openModal = (event) => {
+      event.preventDefault()
+      const { value } = event.target
+  
+      const [modal] = document.getElementsByClassName('modal')
+      const selectedModalContent = modal.children[value]
+      
+      modal.style.display = 'flex'
+      selectedModalContent.style.display = 'block'
+    }
+
+    const closeModal = (event) => {
+      event.preventDefault()
+      const { value } = event.target
+
+      const [modal] = document.getElementsByClassName('modal')
+      const selectedModalContent = modal.children[value]
+
+      modal.style.display = 'none'
+      selectedModalContent.style.display = 'none'
+    }
+    
     const welcome = () => {
-      const greetings = document.getElementById('greetings')
-      const home = document.getElementById('home')
-      greetings.style.display = 'none'
-      home.style.display = 'block'
+      event.preventDefault()
+
+      const saveTheDate = document.getElementById('img-savethedate')
+      const invitation = document.getElementById('img-invitation')
+      const [btnWelcome] = document.getElementsByClassName('btn-welcome')
+      
+      saveTheDate.style.display = 'none'
+      btnWelcome.style.display = 'none'
+      invitation.style.display = 'block'
     }
 
     const form = document.querySelector('#wedForm')
