@@ -10,26 +10,24 @@
 <body>
 
 
-  <main class="greetings" >
-    <img id="img-savethedate" src="./assets/saveTheDate2500.webp" alt="">
-    <img id="img-invitation" src="./assets/invitacion2500.webp" alt="" > 
-
-    <button class="btn-welcome" onclick="welcome(event)">Entrar</button>
-
-    <div class="header">
-      <h1>Paula & Juan</h1>
-      <h2>9 de Junio</h2>
-    </div>
-
+  <div class="invitation-handler">
     <div class="nav">
       <button value="0" onClick="openModal(event)">RSVP</button>
       <button value="1" onClick="openModal(event)">Info</button>
       <button value="2" onClick="openModal(event)">Otra Info?</button>
     </div>
-  </main>
+  </div>
 
+  <main class="greetings" >
+    <img id="img-savethedate" src="./assets/saveTheDate2500.webp" alt="">
+    
+    <div class="title">
+      <h1>Paula & Juan</h1>
+      <h2>9 de Junio</h2>
+    </div>
+    
+    <button class="btn-welcome" onclick="welcome(event)">Entrar</button>
 
-  <main id="home">
   </main>
 
 
@@ -123,12 +121,10 @@
     const welcome = () => {
       event.preventDefault()
 
-      const saveTheDate = document.getElementById('img-savethedate')
-      const invitation = document.getElementById('img-invitation')
-      const [btnWelcome] = document.getElementsByClassName('btn-welcome')
+      const [greetings] = document.getElementsByClassName('greetings')
+      const [invitation] = document.getElementsByClassName('invitation-handler')
       
-      saveTheDate.style.display = 'none'
-      btnWelcome.style.display = 'none'
+      greetings.style.display = 'none'
       invitation.style.display = 'block'
     }
 

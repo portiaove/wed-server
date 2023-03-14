@@ -1,10 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  /* background-color: green */
-  /* background-size: 400% 400%;
-  color: aliceblue;
-  animation: gradient 15s ease infinite; */
 }
 
 h1 {
@@ -20,6 +16,15 @@ button {
   outline: none;
 }
 
+.invitation-handler {
+  display: none;
+  background-image: url('./assets/invitacion2500.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  height: 100vh;
+}
+
 
 /* Greetings */
 .greetings {
@@ -32,39 +37,40 @@ button {
   justify-content: center;
 }
 .btn-welcome {
-  display: none;
+  font-size: 30px;
+  display: block;
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  left: 47%;
+  bottom: 20%;
+  border-bottom: 1px solid black;
 }
 #img-savethedate {
   height: 100%;
 }
 
-#img-invitation {
-  display: none;
-  width: 100%;
-}
-
-.greetings .header {
+.title {
   position: absolute;
   top: 10%;
 }
 
-.greetings .header h1 {
+.title h1 {
   font-size: 50px;
 }
 
-.greetings .header h2 {
+.title h2 {
   margin-top: 70px;
 }
 
 .nav {
-  position: absolute;
-  bottom: 0;
-  left: 48%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  height: 45%;
+  width: 100%;
+  max-width: 800px;
+  height: 86vh;
+  margin-left: auto;
 }
 
 .nav > button {
@@ -73,6 +79,8 @@ button {
 
 
 .modal {
+  display: flex;
+  justify-content: center;
   z-index: 1;
   opacity: 0;
   position: fixed;
@@ -93,6 +101,7 @@ button {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
+
 
 .modal-content {
   display: none;
@@ -116,37 +125,56 @@ button {
 
 
 
-
-
-@media only screen and (max-width: 385px) {
-  .nav {
-    left: 45%;
+@media only screen and (min-width: 485px) {
+  .btn-welcome {
+    left: 50%;
   }
 }
-
 @media only screen and (min-width: 660px) {
   .greetings {
-    display: block;
     height: 100%;
   } 
   .btn-welcome {
-    display: block;
-    height: 40px;
-    width: 14%;
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
-    font-size: 24px;
-    color: #4b3214;
-    background-color: #e3e5e4;
-    border: 1px solid #4b3214;
+    left: 54%;
   }
   #img-savethedate {
-    width: 100%;
+    max-width: 1000px;
     height: auto;
+  }
+
+  .nav > button {
+    font-size: 26px;
+  }
+
+  .title > h1 {
+    font-size: 6em;
+  }
+
+  .title > h2 {
+    font-size: 3em;
   }
 }
 
+@media only screen and (min-width: 1080px) {
+  .btn-welcome {
+    left: 52%;
+  }
+  .nav {
+    max-width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .nav {
+    height: 83vh;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .btn-welcome {
+    left: 51%;
+  }
+}
 
 
 /*.content {
@@ -186,15 +214,3 @@ button {
   font-size: 18px;
 } */
 
-/* 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-} */
