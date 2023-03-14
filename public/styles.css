@@ -27,6 +27,7 @@ button {
   overflow-x: hidden;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -40,6 +41,19 @@ button {
 #img-invitation {
   display: none;
   width: 100%;
+}
+
+.greetings .header {
+  position: absolute;
+  top: 10%;
+}
+
+.greetings .header h1 {
+  font-size: 50px;
+}
+
+.greetings .header h2 {
+  margin-top: 70px;
 }
 
 .nav {
@@ -59,16 +73,25 @@ button {
 
 
 .modal {
-  display: none;
-  justify-content: center;
+  z-index: 1;
+  opacity: 0;
   position: fixed;
-  z-index: 1; /* Sit on top */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   background-color: #9b9194;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.opaque {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .modal-content {

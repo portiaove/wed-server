@@ -16,6 +16,11 @@
 
     <button class="btn-welcome" onclick="welcome(event)">Entrar</button>
 
+    <div class="header">
+      <h1>Paula & Juan</h1>
+      <h2>9 de Junio</h2>
+    </div>
+
     <div class="nav">
       <button value="0" onClick="openModal(event)">RSVP</button>
       <button value="1" onClick="openModal(event)">Info</button>
@@ -99,19 +104,19 @@
   
       const [modal] = document.getElementsByClassName('modal')
       const selectedModalContent = modal.children[value]
-      
-      modal.style.display = 'flex'
+
+      modal.classList.toggle('opaque')
       selectedModalContent.style.display = 'block'
     }
-
+    
     const closeModal = (event) => {
       event.preventDefault()
       const { value } = event.target
-
+      
       const [modal] = document.getElementsByClassName('modal')
       const selectedModalContent = modal.children[value]
-
-      modal.style.display = 'none'
+      
+      modal.classList.toggle('opaque')
       selectedModalContent.style.display = 'none'
     }
     
