@@ -68,7 +68,7 @@ button {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  max-width: 800px;
+  max-width: 690px;
   height: 86vh;
   margin-left: auto;
 }
@@ -176,6 +176,13 @@ button {
   }
 }
 
+@media only screen and (max-height: 700px)
+                   and (orientation: landscape) {
+  .nav {
+    max-width: 400px;
+    height: 80vh;
+  }
+}
 
 /*.content {
   height: 100vh;
