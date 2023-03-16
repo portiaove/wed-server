@@ -38,24 +38,7 @@
 
 
   
-
-  <!-- <div class="content">
-    <h1>Hola muy buenas</h1>
-    
-    <form id="wedForm">
-      <label for="name">Cómo te llamas?</label>
-      <input type="text" name="name" id="name">
-      <label for="attending">Vas a venir a la boda?</label>
-      <input type="text" name="attending" id="attending">
-      <label for="impediments">Tienes algún imedimento alimenticio?</label>
-      <input type="text" name="impediments" id="impediments">
-      <label for="bus">Vendrás en autobus a la boda?</label>
-      <input type="text" name="bus" id="bus">
-      <button type="submit">Enviar</button>
-    </form>
-  </div>-->
-
-
+  
   <div class="modal">
     <div class="modal-content">
       <div class="header">
@@ -64,8 +47,62 @@
       </div>
       <div class="body">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+
+          <form id="wedForm">
+            <div>
+              <label for="name">Cómo te llamas?</label>
+              <input type="text" name="name" id="name">
+            </div>
+
+            <div class="form-radio">
+              <p>Vas a venir a la boda?</p>
+              <div>
+                <input type="radio" id="attending" name="attending" value="Si">
+                <label for="attending"> Si </label>
+              </div>
+              <div>
+                <input type="radio" id="attending" name="attending" value="No">
+                <label for="attending"> No </label>
+              </div>
+            </div>
+            
+            <div>
+              <label for="impediments">Tienes algún impedimento alimenticio?</label>
+              <input type="text" name="impediments" id="impediments">
+            </div>
+            
+            <div class="form-radio">
+              <p>Irás en autobús? Saldrán desde Moncloa a las 18h</p>
+              <div>
+                <input type="radio" id="bus_in" name="bus_in" value="Si">
+                <label for="bus_in"> Si </label>
+              </div>
+              <div>
+                <input type="radio" id="bus_in" name="bus_in" value="No">
+                <label for="bus_in"> No </label>
+              </div>
+            </div>
+
+            <div class="form-radio">
+              <p>Volverás en autobús? Habrá dos tandas, a las 3h y a las 6h</p>
+              <div>
+                <input type="radio" id="bus_out" name="bus_out" value="Si">
+                <label for="bus_out"> Si </label>
+              </div>
+              <div>
+                <input type="radio" id="bus_out" name="bus_out" value="No">
+                <label for="bus_out"> No </label>
+              </div>
+            </div>
+            
+            <div>
+              <label for="comments">Quieres dejarnos algún comentario?</label>
+              <input type="text" name="comments" id="comments">
+            </div>
+
+            <button type="submit">Enviar</button>
+          </form>
+
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
       </div>

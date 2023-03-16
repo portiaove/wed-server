@@ -3,6 +3,11 @@
   src: url('assets/Antro_Vectra.otf') format('opentype');
 }
 
+:root {
+  --color-primary: black;
+  --color-secondary: white;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -212,40 +217,70 @@ button {
   }
 }
 
-/*.content {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,36,1) 28%, rgba(0,212,255,1) 50%, rgba(255,130,0,1) 72%, rgba(2,0,36,1) 100%);
-}
-
 #wedForm {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: space-evenly;
-  justify-content: center;
-  width: 80%;
-
+  align-items: center;
 }
 
-#wedForm > input {
-  margin-bottom: 20px;
-  width: 50%;
+#wedForm > div {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+}
+#wedForm > div > p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
   height: 30px;
-  border-radius: 4px;
-  border: 1px solid aquamarine;
+  font-size: 18px;
+  border-radius: 2px;
+  border: 0;
   margin-top: 10px;
 }
 
+.form-radio > div {
+  display: flex;
+  gap: 10px;
+}
+
+.form-radio > p + div {
+  margin-bottom: 6px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.2em;
+  height: 1.2em;
+  border: 0.2em solid currentColor;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  box-shadow: 0 0 0 1px var(--color-primary);
+  border-width: 8px;
+}
+
 #wedForm > button {
-  height: 40px;
-  width: 100px;
-  outline: none;
-  border-radius: 4px;
-  border-style: unset;
-  font-size: 18px;
-} */
+  height: 45px;
+  width: 100%;
+  margin-top: 40px;
+  border: 1px solid black;
+  border-radius: 2px;
+  font-size: 22px;
+}
+#wedForm > button:hover {
+  color: var(--color-secondary);
+  background: var(--color-primary);
+}
 
