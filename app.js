@@ -29,11 +29,11 @@ app.get('/hola', (req, res) => {
 app.post('/submit-wedding-form', async (req, res) => {
   try {
     // Parse form data from request body
-    const { name, attending, impediments, bus_in, bus_out } = req.body;
+    const { name, attending, impediments, bus_in, bus_out, comments } = req.body;
     // Write data to Google Sheet
     const sheetId = 'your-sheet-id';
     const range = 'Sheet1!A1';
-    const values = [[name, attending, impediments, bus_in, bus_out]];
+    const values = [[name, attending, impediments, bus_in, bus_out, comments]];
     const result = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
       range: range,
