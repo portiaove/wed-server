@@ -1,6 +1,12 @@
+@font-face {
+  font-family: 'antrovectra';
+  src: url('assets/fonts/Antro_Vectra.otf') format('opentype');
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 
 h1 {
@@ -8,12 +14,14 @@ h1 {
 }
 
 button {
+  font-family: sans-serif;
   font-size: 22px;
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
   overflow: hidden;
   outline: none;
+  cursor: pointer;
 }
 
 .invitation-handler {
@@ -36,32 +44,53 @@ button {
   align-items: center;
   justify-content: center;
 }
-.btn-welcome {
-  font-size: 30px;
-  display: block;
-  height: 50px;
-  width: 100px;
-  position: absolute;
-  left: 47%;
-  bottom: 20%;
-  border-bottom: 1px solid black;
-}
 #img-savethedate {
   height: 100%;
 }
-
-.title {
+.greetings-title {
+  font-family: 'antrovectra', sans-serif;
   position: absolute;
   top: 10%;
 }
 
-.title h1 {
+.greetings-title > h1 {
   font-size: 50px;
 }
 
-.title h2 {
-  margin-top: 70px;
+.greetings-title > h2 {
+  margin-top: 40px;
 }
+.greetings-body {
+  height: 40%;
+  width: 34%;
+  max-width: 160px;
+
+  position: absolute;
+  left: 44%;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  font-size: 30px;
+  text-align: center;
+  line-height: 1.5;
+}
+.greetings-body > div > p {
+  font-family: 'antrovectra', sans-serif;
+  font-size: 30px;
+  margin: 0;
+}
+.btn-welcome {
+  font-size: 30px;
+  height: 50px;
+  width: 100px;
+  border-bottom: 1px solid black;
+}
+
+
 
 .nav {
   display: flex;
@@ -125,17 +154,16 @@ button {
 
 
 
-@media only screen and (min-width: 485px) {
-  .btn-welcome {
-    left: 50%;
-  }
-}
 @media only screen and (min-width: 660px) {
   .greetings {
     height: 100%;
   } 
-  .btn-welcome {
-    left: 54%;
+  .greetings-body {
+    left: 47%;
+    max-width: 200px;
+  }
+  .greetings-body > div > p {
+    font-size: 50px;
   }
   #img-savethedate {
     max-width: 1000px;
@@ -146,18 +174,18 @@ button {
     font-size: 26px;
   }
 
-  .title > h1 {
+  .greetings-title > h1 {
     font-size: 6em;
   }
 
-  .title > h2 {
+  .greetings-title > h2 {
     font-size: 3em;
   }
 }
 
 @media only screen and (min-width: 1080px) {
-  .btn-welcome {
-    left: 52%;
+  .greetings-body {
+    left: 48%;
   }
   .nav {
     max-width: 60%;
@@ -171,7 +199,7 @@ button {
 }
 
 @media only screen and (min-width: 1800px) {
-  .btn-welcome {
+  .greetings-body {
     left: 51%;
   }
 }
