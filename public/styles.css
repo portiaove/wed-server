@@ -4,7 +4,7 @@
 }
 
 :root {
-  --color-primary: #54583c;
+  --color-primary: #40442c;
   --color-secondary: white;
   --greetings-font-size: 27px;
 }
@@ -18,6 +18,10 @@ body {
 
 h1 {
   margin: 0;
+}
+
+a {
+  color: var(--color-primary)
 }
 
 button {
@@ -149,6 +153,12 @@ button {
 .modal-content > .header > .close {
   font-size: 50px;
   padding: 0 12px;
+}
+.modal-content > .body {
+  padding-bottom: 20px;
+}
+.modal-content > .body > h3{
+  margin-top: 1.5em;
 }
 
 
