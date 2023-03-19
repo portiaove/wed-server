@@ -48,65 +48,88 @@
         <button value="0" class="close" onclick="closeModal(event)">&times;</button>
       </div>
       <div class="body">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
-
+        <div id="wedFormWrapper">
+          <p>Por favor, rellena el formulario para confirmar tu asistencia y ayudarnos en la organización de la boda.</p>
           <form id="wedForm">
             <div>
-              <label for="name">Cómo te llamas?</label>
-              <input placeholder="Nombre y Apellidos" type="text" name="name" id="name">
+              <label for="name">Indica tu nombre completo</label>
+              <input placeholder="Nombre y apellidos" type="text" name="name" id="name">
             </div>
-
+  
             <div class="form-radio">
-              <p>Vas a venir a la boda?</p>
+              <p>¿Asistirás a la boda?</p>
               <div>
-                <input type="radio" id="attending" name="attending" value="Si">
-                <label for="attending"> Si </label>
+                <input type="radio" id="attending" name="attending" value="Si" onclick="showAttendanceForm()">
+                <label for="attending"> Sí </label>
               </div>
               <div>
-                <input type="radio" id="attending" name="attending" value="No">
+                <input type="radio" id="attending" name="attending" value="No" onclick="hideAttendanceForm()">
                 <label for="attending"> No </label>
               </div>
             </div>
             
-            <div>
-              <label for="impediments">Tienes algún impedimento alimenticio?</label>
-              <input type="text" name="impediments" id="impediments">
-            </div>
-            
-            <div class="form-radio">
-              <p>Irás en autobús? Saldrán desde Moncloa a las 18h</p>
+            <div id="attendanceForm" style="display: none">
               <div>
-                <input type="radio" id="bus_in" name="bus_in" value="Si">
-                <label for="bus_in"> Si </label>
+                <label for="mail">Déjanos tus datos de contacto por si tuviésemos que contactar contigo</label>
+                <input type="text" name="mail" id="mail" placeholder="Email / teléfono">
               </div>
+              
               <div>
-                <input type="radio" id="bus_in" name="bus_in" value="No">
-                <label for="bus_in"> No </label>
+                <label for="impediments">¿Tienes alguna restricción alimentaria (intolerancia, alergia, vegetariano/vegano/pescetariano, etc)?</label>
+                <input type="text" name="impediments" id="impediments">
               </div>
-            </div>
+              
+              <div>
+                <p>¿Vas a utilizar el servicio de autobuses?</p>
+                <div class="form-radio">
+                  <p>Ida</p>
+                  <div>
+                    <input type="radio" id="bus_in" name="bus_in" value="Si">
+                    <label for="bus_in"> Sí, salida desde Moncloa a las 18h </label>
+                  </div>
+                  <div>
+                    <input type="radio" id="bus_in" name="bus_in" value="No">
+                    <label for="bus_in"> No </label>
+                  </div>
+                </div>
+                
+                <div class="form-radio">
+                  <p>Vuelta</p>
+                  <div>
+                    <input type="radio" id="bus_out" name="bus_out" value="1">
+                    <label for="bus_out"> Sí, salida a Madrid a las 2.30h </label>
+                  </div>
+                  <div>
+                    <input type="radio" id="bus_out" name="bus_out" value="2">
+                    <label for="bus_out"> Sí, salida a Madrid a las 5.30h - 6h </label>
+                  </div>
+                  <div>
+                    <input type="radio" id="bus_out" name="bus_out" value="No">
+                    <label for="bus_out"> No </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div>
+                <label for="comments">¿Quieres dejarnos algún comentario o palabras?</label>
+                <input type="text" name="comments" id="comments">
+              </div>
 
-            <div class="form-radio">
-              <p>Volverás en autobús? Habrá dos tandas, a las 3h y a las 6h</p>
-              <div>
-                <input type="radio" id="bus_out" name="bus_out" value="Si">
-                <label for="bus_out"> Si </label>
-              </div>
-              <div>
-                <input type="radio" id="bus_out" name="bus_out" value="No">
-                <label for="bus_out"> No </label>
-              </div>
             </div>
-            
-            <div>
-              <label for="comments">Quieres dejarnos algún comentario?</label>
-              <input type="text" name="comments" id="comments">
-            </div>
-
-            <button type="submit">Enviar</button>
+  
+            <button id="submitBtn" type="submit">Enviar</button>
           </form>
+        </div>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
+        <div id="wedFormSuccess">
+          <div>
+            <p>Sentimos mucho que no puedas acompañarnos pero lo entendemos y esperamos poder celebrar contigo pronto</p>
+          </div>
+          <div>
+            <h3>¡Gracias!</h3>
+            <p>Tenemos muchas ganas de compartir este día contigo :)</p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -121,7 +144,7 @@
         <p>Tanto la ceremonia como la celebración posterior tendrán lugar en la finca Prados Moros (M-600, km 02, 28440 Guadarrama, Madrid, España)</p>
         <code>ICONO PRADOS MOROS</code>
         <h3>Traslado</h3>
-        <p>Facilitaremos autobuses que saldrán desde la Plaza de Cristo Rey a las 18.15h</p>
+        <p>Facilitaremos autobuses que saldrán desde la Plaza de Cristo Rey a las 18h</p>
         <code>ICONO PLAZA AUTOBUS</code>
         <p>Se ruega puntualidad. Los autobuses saldrán a la hora prevista y no podrán esperar a personas que lleguen con retraso. </p>
         <p>Para la vuelta, facilitaremos autobuses para volver a Madrid ciudad en dos turnos, uno a las 2.30h y otro entre 5.30h y 6h.</p>
@@ -133,6 +156,8 @@
         <h3>Regalo de boda</h3>
         <p>Nuestro mayor regalo es que nos acompañes, pero si quieres contribuir a nuestra luna de miel, puedes hacerlo a través de esta cuenta:</p>
         <p>ES03 0182 5322 2402 0069 4834</p>
+        <h3>RSVP</h3>
+        <p>Te agradecemos que confirmes tu asistencia en la pestaña de RSVP antes del 5 de mayo de 2023</p>
       </div>
     </div>
 
@@ -153,6 +178,16 @@
 
 
   <script>
+
+    const welcome = () => {
+      event.preventDefault()
+
+      const [greetings] = document.getElementsByClassName('greetings')
+      const [invitation] = document.getElementsByClassName('invitation-handler')
+      
+      greetings.style.display = 'none'
+      invitation.style.display = 'block'
+    }
 
     const openModal = (event) => {
       event.preventDefault()
@@ -176,14 +211,21 @@
       selectedModalContent.style.display = 'none'
     }
     
-    const welcome = () => {
-      event.preventDefault()
+    const showAttendanceForm = () => {
+      const otherInputs = document.getElementById("attendanceForm");
+      otherInputs.style.display = "block";
+      showSubmitBtn()
+    }
 
-      const [greetings] = document.getElementsByClassName('greetings')
-      const [invitation] = document.getElementsByClassName('invitation-handler')
-      
-      greetings.style.display = 'none'
-      invitation.style.display = 'block'
+    const hideAttendanceForm = () => {
+      const otherInputs = document.getElementById("attendanceForm");
+      otherInputs.style.display = "none";
+      showSubmitBtn()
+    }
+
+    const showSubmitBtn = () => {
+      const submitBtn = document.getElementById("submitBtn")
+      submitBtn.style.display = "block"
     }
 
     const form = document.querySelector('#wedForm')
@@ -201,8 +243,19 @@
         headers: {"Content-type": "application/json;charset=UTF-8"}
       });
       if (response.ok) {
-        alert('Message sent successfully');
         form.reset();
+        const wedFormSuccess = document.getElementById('wedFormSuccess')
+        const wedFormWrapper = document.getElementById('wedFormWrapper')
+        wedFormWrapper.style.display = "none"
+        wedFormSuccess.style.display = "block"
+        
+        if (formDataObject.attending === "No") {
+          const sadMessage = wedFormSuccess.children[0]
+          sadMessage.style.display = "block"
+        } else {
+          const happyMessage = wedFormSuccess.children[1]
+          happyMessage.style.display = "block"
+        }
       } else {
         const error = await response.json();
         alert(`Error: ${error.message}`);

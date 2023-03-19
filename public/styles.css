@@ -155,7 +155,7 @@ button {
   padding: 0 12px;
 }
 .modal-content > .body {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 .modal-content > .body > h3{
   margin-top: 1.5em;
@@ -243,24 +243,36 @@ button {
   align-items: center;
 }
 
-#wedForm > div {
+#wedForm > div, #attendanceForm > div {
   width: 100%;
   max-width: 400px;
   display: flex;
   flex-direction: column;
   padding: 15px 0;
 }
-#wedForm > div > p {
+#wedForm > div > p, #attendanceForm > div > p {
   margin: 0;
   margin-bottom: 10px;
 }
 
+#attendanceForm {
+  display: none;
+}
+
+#wedFormSuccess {
+  display: none
+}
+#wedFormSuccess > div {
+  display: none
+}
+
 input[type="text"] {
-  height: 30px;
-  font-size: 18px;
-  border-radius: 2px;
+  height: 38px;
+  font-size: 20px;
+  border-radius: 3px;
   border: 0;
   margin-top: 10px;
+  outline: none;
 }
 
 .form-radio > div {
@@ -290,7 +302,8 @@ input[type="radio"]:checked {
   border-width: 8px;
 }
 
-#wedForm > button {
+#submitBtn {
+  display: none;
   height: 45px;
   width: 100%;
   margin-top: 40px;
@@ -298,7 +311,7 @@ input[type="radio"]:checked {
   border-radius: 2px;
   font-size: 22px;
 }
-#wedForm > button:hover {
+#submitBtn:hover {
   color: var(--color-secondary);
   background: var(--color-primary);
 }

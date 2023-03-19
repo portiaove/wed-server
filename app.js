@@ -28,12 +28,20 @@ app.get('/hola', (req, res) => {
 // Define route handler for form submission
 app.post('/submit-wedding-form', async (req, res) => {
   try {
+    const defaultValue = '';
     // Parse form data from request body
-    const { name, attending, impediments, bus_in, bus_out, comments } = req.body;
+    const { 
+      name, 
+      attending, 
+      impediments = defaultValue, 
+      bus_in = defaultValue, 
+      bus_out = defaultValue, 
+      comments = defaultValue, 
+      email = defaultValue
+    } = req.body;
     // Write data to Google Sheet
-    const sheetId = 'your-sheet-id';
     const range = 'Sheet1!A1';
-    const values = [[name, attending, impediments, bus_in, bus_out, comments]];
+    const values = [[name, attending, impediments, bus_in, bus_out, comments, email]];
     const result = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
       range: range,
