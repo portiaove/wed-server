@@ -11,9 +11,9 @@
 
   <div class="invitation-handler">
     <div class="nav">
-      <button value="0" onClick="openModal(event)">RSVP</button>
       <button value="1" onClick="openModal(event)">Info</button>
-      <button value="2" onClick="openModal(event)">Otra Info?</button>
+      <button value="0" onClick="openModal(event)">RSVP</button>
+      <button value="2" onClick="openModal(event)">Contacto</button>
     </div>
   </div>
 
@@ -22,16 +22,29 @@
     
     <div class="greetings-title">
       <h1>Paula & Juan</h1>
-      <h2>9 de Junio</h2>
+      <h2>9 de junio, 2023</h2>
     </div>
     
     <div class="greetings-body">
       <div>
+        <p>Nos</p>
+        <p>encantaría</p>
+        <p>que nos</p>
+        <p>acompañases</p> 
+      </div>
+      <!-- <div>
         <p>Os</p>
         <p>invitamos</p>
         <p>a nuestra boda</p> 
-      </div>
-      <button class="btn-welcome" onclick="welcome(event)">Entrar</button>
+      </div> -->
+      
+      <!-- <button class="btn-welcome" onclick="welcome(event)">
+      <img src="./assets/heart-arrow.svg" alt=""></button> -->
+      <button class="btn-welcome" style="display: flex; align-items: center; height: auto; width: auto; border: none" onclick="welcome(event)">
+        <p>
+          Entrar
+        </p> 
+        <img style="height: 25px; width: 30px" src="./assets/chevron-arrow-right.svg" alt=""></button>
     </div>
 
   </main>
@@ -51,7 +64,7 @@
           <form id="wedForm">
             <div>
               <label for="name">Cómo te llamas?</label>
-              <input type="text" name="name" id="name">
+              <input placeholder="Nombre y Apellidos" type="text" name="name" id="name">
             </div>
 
             <div class="form-radio">
@@ -113,6 +126,7 @@
         <button value="1" class="close" onclick="closeModal(event)">&times;</button>
       </div>
       <div class="body">
+        <h3>Fecha y Lugar</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ab pariatur debitis, sunt eveniet obcaecati dicta explicabo quam velit nihil inventore blanditiis molestiae corrupti assumenda voluptates, impedit quos repellat quia.</p>
