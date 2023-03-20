@@ -70,8 +70,8 @@
             
             <div id="attendanceForm" style="display: none">
               <div>
-                <label class="modal-question" for="mail">Déjanos tus datos de contacto por si tuviésemos que contactar contigo</label>
-                <input type="text" name="mail" id="mail" placeholder="Email / teléfono">
+                <label class="modal-question" for="email">Déjanos tus datos de contacto por si tuviésemos que contactar contigo</label>
+                <input type="text" name="email" id="email" placeholder="Email">
               </div>
               
               <div>
@@ -217,6 +217,7 @@
       
       modal.classList.toggle('opaque')
       selectedModalContent.style.display = 'none'
+      resetFormLayout()
     }
     
     const showAttendanceForm = () => {
@@ -230,10 +231,27 @@
       otherInputs.style.display = "none";
       showSubmitBtn()
     }
-
+    
     const showSubmitBtn = () => {
       const submitBtn = document.getElementById("submitBtn")
       submitBtn.style.display = "block"
+    }
+    
+    const resetFormLayout = () => {
+      const otherInputs = document.getElementById("attendanceForm");
+      const submitBtn = document.getElementById("submitBtn")
+      const wedFormSuccess = document.getElementById('wedFormSuccess')
+      const wedFormWrapper = document.getElementById('wedFormWrapper')
+      const sadMessage = wedFormSuccess.children[0]
+      const happyMessage = wedFormSuccess.children[1]
+
+      wedFormWrapper.style.display = "block"
+      otherInputs.style.display = "none";
+      submitBtn.style.display = "none"
+      wedFormSuccess.style.display = "none"
+      sadMessage.style.display = "none"
+      happyMessage.style.display = "none"
+
     }
 
     const form = document.querySelector('#wedForm')
