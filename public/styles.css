@@ -9,6 +9,10 @@
   --greetings-font-size: 27px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -128,6 +132,7 @@ button {
   pointer-events: none;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  scrollbar-gutter: stable both-edges;
 }
 
 .opaque {
@@ -149,6 +154,7 @@ button {
 .modal-content > .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 .modal-content > .header > .close {
   font-size: 50px;
@@ -157,10 +163,17 @@ button {
 .modal-content > .body {
   padding-bottom: 30px;
 }
-.modal-content > .body > h3{
+.modal-question {
   margin-top: 1.5em;
+  margin-bottom: 0.6em;
+  font-size: 1.4em !important;
 }
-
+.map-link {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 
 
@@ -245,13 +258,11 @@ button {
 
 #wedForm > div, #attendanceForm > div {
   width: 100%;
-  max-width: 400px;
   display: flex;
   flex-direction: column;
   padding: 15px 0;
 }
 #wedForm > div > p, #attendanceForm > div > p {
-  margin: 0;
   margin-bottom: 10px;
 }
 
@@ -268,6 +279,7 @@ button {
 
 input[type="text"] {
   height: 38px;
+  padding-left: 10px;
   font-size: 20px;
   border-radius: 3px;
   border: 0;
