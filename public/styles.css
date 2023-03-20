@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 @font-face {
   font-family: 'antrovectra';
   src: url('assets/Antro_Vectra.otf') format('opentype');
 }
 
+
 :root {
   --color-primary: #40442c;
-  --color-secondary: white;
+  --color-secondary: #f4f1f2;
   --greetings-font-size: 27px;
 }
 
@@ -16,7 +19,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: var(--color-primary)
 }
 
@@ -30,7 +33,7 @@ a {
 
 button {
   color: var(--color-primary);
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   background-color: transparent;
   background-repeat: no-repeat;
   border: none;
@@ -157,6 +160,7 @@ button {
   margin-bottom: 40px;
 }
 .modal-content > .header > .close {
+  font-family: sans-serif;
   font-size: 50px;
   padding: 0 12px;
 }
@@ -285,16 +289,13 @@ input[type="text"] {
   border: 0;
   margin-top: 10px;
   outline: none;
-  background-color: #f4f1f2;
+  background-color: var(--color-secondary);
 }
 
 .form-radio > div {
   display: flex;
   gap: 10px;
-}
-
-.form-radio > p + div {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 input[type="radio"] {
