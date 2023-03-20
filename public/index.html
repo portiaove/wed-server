@@ -183,7 +183,7 @@
 
   <script>
 
-    const colorz = ['#bdc7ca', '#d06b3b', '#835e30', '#4c6469', '#798277', '#afbdc5', '#da9754'];
+    const modalColors = ['#b9c2b3', '#afbdc5', '#ffb367']
 
     const welcome = () => {
       event.preventDefault()
@@ -198,13 +198,12 @@
     const openModal = (event) => {
       event.preventDefault()
       const { value } = event.target
-      const randomColorIndex = Math.floor(Math.random() * colorz.length);
   
       const [modal] = document.getElementsByClassName('modal')
       const selectedModalContent = modal.children[value]
 
       modal.classList.toggle('opaque')
-      modal.style.backgroundColor = colorz[randomColorIndex]
+      modal.style.backgroundColor = modalColors[value]
       selectedModalContent.style.display = 'block'
     }
     
