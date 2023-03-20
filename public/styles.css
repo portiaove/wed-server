@@ -304,6 +304,7 @@ input[type="radio"] {
   font: inherit;
   color: currentColor;
   width: 1.2em;
+  min-width: 1.2em;
   height: 1.2em;
   border: 0.2em solid currentColor;
   border-radius: 50%;

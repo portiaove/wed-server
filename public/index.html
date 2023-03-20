@@ -59,12 +59,12 @@
             <div class="form-radio">
               <p class="modal-question" style="margin-bottom: 0.6em">¿Asistirás a la boda?</p>
               <div>
-                <input type="radio" id="attending" name="attending" value="Si" onclick="showAttendanceForm()">
-                <label for="attending"> Sí </label>
+                <input type="radio" id="attendingY" name="attending" value="Si" onclick="showAttendanceForm()">
+                <label for="attendingY"> Sí </label>
               </div>
               <div>
-                <input type="radio" id="attending" name="attending" value="No" onclick="hideAttendanceForm()">
-                <label for="attending"> No </label>
+                <input type="radio" id="attendingN" name="attending" value="No" onclick="hideAttendanceForm()">
+                <label for="attendingN"> No </label>
               </div>
             </div>
             
@@ -84,28 +84,28 @@
                 <div class="form-radio" style="margin-left: 18px">
                   <p style="font-size: 26px;">Ida</p>
                   <div>
-                    <input type="radio" id="bus_in" name="bus_in" value="Si">
-                    <label for="bus_in"> Sí, salida desde Moncloa a las 18h </label>
+                    <input type="radio" id="bus_inY" name="bus_in" value="Si">
+                    <label for="bus_inY"> Sí, salida desde Moncloa a las 18h </label>
                   </div>
                   <div>
-                    <input type="radio" id="bus_in" name="bus_in" value="No">
-                    <label for="bus_in"> No </label>
+                    <input type="radio" id="bus_inN" name="bus_in" value="No">
+                    <label for="bus_inN"> No </label>
                   </div>
                 </div>
                 
                 <div class="form-radio" style="margin-left: 18px">
                   <p style="font-size: 26px;">Vuelta</p>
                   <div>
-                    <input type="radio" id="bus_out" name="bus_out" value="1">
-                    <label for="bus_out"> Sí, salida a Madrid a las 2.30h </label>
+                    <input type="radio" id="bus_out1" name="bus_out" value="1">
+                    <label for="bus_out1"> Sí, salida a Madrid a las 2.30h </label>
                   </div>
                   <div>
-                    <input type="radio" id="bus_out" name="bus_out" value="2">
-                    <label for="bus_out"> Sí, salida a Madrid a las 5.30h - 6h </label>
+                    <input type="radio" id="bus_out2" name="bus_out" value="2">
+                    <label for="bus_out2"> Sí, salida a Madrid a las 5.30h - 6h </label>
                   </div>
                   <div>
-                    <input type="radio" id="bus_out" name="bus_out" value="No">
-                    <label for="bus_out"> No </label>
+                    <input type="radio" id="bus_outN" name="bus_out" value="No">
+                    <label for="bus_outN"> No </label>
                   </div>
                 </div>
               </div>
@@ -263,6 +263,7 @@
       for (let [key, value] of formData.entries()) {
         formDataObject[key] = value;
       }
+      console.log(formDataObject)
       const response = await fetch('/submit-wedding-form', {
         method: 'POST',
         body: JSON.stringify(formDataObject),
