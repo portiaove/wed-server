@@ -3,8 +3,8 @@
 @font-face {
   font-family: 'antrovectra';
   src: url('assets/Antro_Vectra.otf') format('opentype');
+  font-weight: normal;
 }
-
 
 :root {
   --color-primary: #40442c;
@@ -20,6 +20,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
+  font-weight: normal;
   color: var(--color-primary)
 }
 
@@ -76,13 +77,14 @@ button {
 }
 
 .greetings-body {
-  height: 44%;
+  height: 41%;
+  bottom: 3%;
+  
   width: 34%;
   max-width: 150px;
-
+  
   position: absolute;
   left: 44%;
-  bottom: 0;
 
   display: flex;
   flex-direction: column;
@@ -100,6 +102,7 @@ button {
 .btn-welcome {
   font-family: 'antrovectra', sans-serif;
   font-size: var(--greetings-font-size);
+  font-weight: bold;
 }
 
 
@@ -167,6 +170,9 @@ button {
 .modal-content > .body {
   padding-bottom: 30px;
 }
+.modal-content > .body > p, #wedFormWrapper > p {
+  text-align: justify;
+}
 .modal-question {
   margin-top: 1.5em;
   margin-bottom: 0.6em;
@@ -188,7 +194,7 @@ button {
     left: 43%;
     font-size: 22px;
   }
-  .greetings-body > button {
+  .btn-welcome {
     font-size: 22px;
   }
 
@@ -199,11 +205,13 @@ button {
     height: 100%;
   } 
   .greetings-body {
+    height: 44%;
+    bottom: 0;
     left: 47%;
     max-width: 200px;
     font-size: 46px;
   }
-  .greetings-body > button {
+  .btn-welcome {
     font-size: 46px;
   }
   #img-savethedate {
@@ -230,6 +238,9 @@ button {
   }
   .nav {
     max-width: 60%;
+  }
+  .modal-content {
+    font-size: 24px;
   }
 }
 
@@ -294,8 +305,14 @@ input[type="text"] {
 
 .form-radio > div {
   display: flex;
-  gap: 10px;
   margin-bottom: 10px;
+}
+.form-radio label {
+  padding-left: 10px;
+  cursor: pointer;
+}
+.form-radio input {
+  cursor: pointer;
 }
 
 input[type="radio"] {
