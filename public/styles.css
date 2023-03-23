@@ -112,7 +112,7 @@ button {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  max-width: 690px;
+  max-width: 625px;
   height: 86vh;
   margin-left: auto;
 }
@@ -189,15 +189,28 @@ button {
 
 
 
+
+@media only screen and (max-width: 500px) 
+                   and (max-height: 720px) {
+  .greetings-body {
+    left: 41%;
+    font-size: 24px;
+  }
+  .greetings-title {
+    top: 5%;
+  }
+}
 @media only screen and (max-width: 380px) {
   .greetings-body {
     left: 43%;
     font-size: 22px;
   }
+  .greetings-title > h1 {
+    font-size: 46px;
+  }
   .btn-welcome {
     font-size: 22px;
   }
-
 }
 
 @media only screen and (min-width: 660px) {
@@ -256,7 +269,7 @@ button {
   }
 }
 
-@media only screen and (max-height: 700px)
+@media only screen and (max-height: 500px)
                    and (orientation: landscape) {
   .nav {
     max-width: 400px;
