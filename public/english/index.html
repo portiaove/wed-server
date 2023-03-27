@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Boda Paula y Juan</title>
+  <title>Paula & Juan Wedding</title>
   <link rel="icon" type="image/png" href="../assets/flowa-32.png" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
     <div class="nav">
       <button value="1" onClick="openModal(event)">Info</button>
       <button value="0" onClick="openModal(event)">RSVP</button>
-      <button value="2" onClick="openModal(event)">Contacto</button>
+      <button value="2" onClick="openModal(event)">Contact</button>
     </div>
   </div>
 
@@ -23,18 +23,18 @@
     
     <div class="greetings-title">
       <h1>Paula & Juan</h1>
-      <h2>9 de junio, 2023</h2>
+      <h2>June 9<sup>th</sup>, 2023</h2>
     </div>
     
     <div class="greetings-body">
       <div>
-        <p>Nos</p>
-        <p>encantaría</p>
-        <p>que nos</p>
-        <p>acompañases</p> 
+        <p>We</p>
+        <p>would love</p>
+        <p>for you</p>
+        <p>to join us</p> 
       </div>
       <button class="btn-welcome" onclick="welcome(event)">
-        Entrar >
+        Enter >
       </button>
     </div>
   </main>
@@ -50,19 +50,19 @@
       </div>
       <div class="body">
         <div id="wedFormWrapper">
-          <p>Te agradeceríamos mucho que rellenases el formulario para confirmar tu asistencia, y ayudarnos de esta manera en la organización de nuestra boda.</p>
+          <p>We would be grateful if you could fill out this form to confirm your attendance and help us organize our wedding.</p>
           <form id="wedForm">
             <button type="submit" disabled style="display: none" aria-hidden="true"></button>
             <div>
-              <label class="modal-question" for="name">Indica tu nombre completo</label>
-              <input placeholder="Nombre y apellidos" type="text" name="name" id="name">
+              <label class="modal-question" for="name">Please indicate your full name</label>
+              <input placeholder="Name & surname" type="text" name="name" id="name">
             </div>
   
             <div class="form-radio">
-              <p class="modal-question" style="margin-bottom: 0.6em">¿Asistirás a la boda?</p>
+              <p class="modal-question" style="margin-bottom: 0.6em">Will you come to our wedding?</p>
               <div>
                 <input type="radio" id="attendingY" name="attending" value="Si" onclick="showAttendanceForm()">
-                <label for="attendingY"> Sí </label>
+                <label for="attendingY"> Yes </label>
               </div>
               <div>
                 <input type="radio" id="attendingN" name="attending" value="No" onclick="hideAttendanceForm()">
@@ -72,22 +72,22 @@
             
             <div id="attendanceForm" style="display: none">
               <div>
-                <label class="modal-question" for="email">Déjanos tu email por si tuviésemos que contactar contigo</label>
+                <label class="modal-question" for="email">Please provide your email address in case we need to get in touch with you</label>
                 <input type="text" name="email" id="email" placeholder="Email">
               </div>
               
               <div>
-                <label class="modal-question" for="impediments">¿Tienes alguna restricción alimentaria (intolerancia, alergia, vegetariano / vegano / pescetariano, etc)?</label>
+                <label class="modal-question" for="impediments">Do you have any dietary restriction or preference (intolerance, allergy, vegetarian, vegan, pescatarian, etc.)?</label>
                 <input type="text" name="impediments" id="impediments">
               </div>
               
               <div>
-                <p class="modal-question">¿Vas a utilizar el servicio de autobuses?</p>
+                <p class="modal-question">Will you be using the bus services?</p>
                 <div class="form-radio" style="margin-left: 18px">
-                  <p style="font-size: 26px;">Ida</p>
+                  <p style="font-size: 26px;">To the wedding</p>
                   <div>
                     <input type="radio" id="bus_inY" name="bus_in" value="Si">
-                    <label for="bus_inY"> Sí, salida desde Moncloa a las 18h </label>
+                    <label for="bus_inY"> Yes, leaving from Moncloa at 6.10 pm </label>
                   </div>
                   <div>
                     <input type="radio" id="bus_inN" name="bus_in" value="No">
@@ -96,14 +96,14 @@
                 </div>
                 
                 <div class="form-radio" style="margin-left: 18px">
-                  <p style="font-size: 26px;">Vuelta</p>
+                  <p style="font-size: 26px;">To return to the city</p>
                   <div>
                     <input type="radio" id="bus_out1" name="bus_out" value="1">
-                    <label for="bus_out1"> Sí, salida a Madrid a las 2.30h </label>
+                    <label for="bus_out1"> Yes, leaving the venue at 2.30 am </label>
                   </div>
                   <div>
                     <input type="radio" id="bus_out2" name="bus_out" value="2">
-                    <label for="bus_out2"> Sí, salida a Madrid a las 5.30h - 6h </label>
+                    <label for="bus_out2"> Yes, leaving the venue between 5.30 and 6 am </label>
                   </div>
                   <div>
                     <input type="radio" id="bus_outN" name="bus_out" value="No">
@@ -113,23 +113,23 @@
               </div>
               
               <div>
-                <label class="modal-question" for="comments">¿Quieres dejarnos algún comentario o tienes alguna duda?</label>
+                <label class="modal-question" for="comments">Would you like to leave any comment or question? We will get back to you.</label>
                 <input type="text" name="comments" id="comments">
               </div>
 
             </div>
   
-            <button id="submitBtn" type="submit">Enviar</button>
+            <button id="submitBtn" type="submit">Send</button>
           </form>
         </div>
 
         <div id="wedFormSuccess">
           <div>
-            <p>Sentimos mucho que no puedas acompañarnos pero lo entendemos y esperamos poder celebrar contigo pronto</p>
+            <p>We regret that you can’t make it, but we understand and we hope to celebrate with you soon.</p>
           </div>
           <div>
-            <h3>¡Gracias!</h3>
-            <p>Tenemos muchas ganas de compartir este día contigo :)</p>
+            <h3>Thank you!</h3>
+            <p>We can’t wait to celebrate with you :)</p>
           </div>
         </div>
       </div>
@@ -141,39 +141,38 @@
         <button value="1" class="close" onclick="closeModal(event)">&times;</button>
       </div>
       <div class="body">
-        <h3 class="modal-question">Fecha y Lugar</h3>
-        <p>La boda tendrá lugar el viernes 9 de junio de 2023. La ceremonia civil dará comienzo alrededor de las 19h, seguida de un cóctel y de una cena.</p>
-        <p>Tanto la ceremonia civil, como la celebración posterior, tendrán lugar en la finca <a href="https://www.google.com/maps/place/Finca+Prados+Moros/@40.6557509,-4.0958649,15z/data=!4m6!3m5!1s0xd410c9083866791:0x73d45adc37c29a00!8m2!3d40.6557509!4d-4.0958649!16s%2Fg%2F1tkb6dhs" target="_blank">Prados Moros (M-600, km 02, 28440 Guadarrama, Madrid, España)</a>.</p>
+        <h3 class="modal-question">When and where?</h3>
+        <p>The wedding will take place on Friday, June 9th, 2023. The civil ceremony will start at around 7 pm and will be followed by a cocktail reception from 8 to 10 pm. A seated dinner will be offered, to be followed by a party from midnight to 6 am.</p>
+        <p>The wedding ceremony and the celebration will take place in Finca <a href="https://www.google.com/maps/place/Finca+Prados+Moros/@40.6557509,-4.0958649,15z/data=!4m6!3m5!1s0xd410c9083866791:0x73d45adc37c29a00!8m2!3d40.6557509!4d-4.0958649!16s%2Fg%2F1tkb6dhs" target="_blank">Prados Moros (M-600, km 02, 28440 Guadarrama, Madrid, Spain)</a>. Click on the icon below for specific location.</p>
         <a class="map-link" href="https://www.google.com/maps/place/Finca+Prados+Moros/@40.6557509,-4.0958649,15z/data=!4m6!3m5!1s0xd410c9083866791:0x73d45adc37c29a00!8m2!3d40.6557509!4d-4.0958649!16s%2Fg%2F1tkb6dhs" target="_blank">
           <img src="../assets/map-icon2.svg" alt="" srcset="">
         </a>
-        <h3 class="modal-question">Traslado</h3>
-        <p>Facilitaremos autobuses para ir a la finca Prados Moros que saldrán desde <a href="https://www.google.com/maps/place/P.%C2%BA+de+Moret,+1,+28008+Madrid/@40.4340782,-3.7205765,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228404b5836c1:0xc58ca77e477d3aa8!8m2!3d40.4340782!4d-3.7205765!16s%2Fg%2F11c2b7gkg4" target="_blank">Paseo de Moret 1 (Moncloa)</a> a las 18.10h.</p>
+        <h3 class="modal-question">Transport</h3>
+        <p>We will offer bus services for guests going to and coming back from the wedding. Buses will depart from <a href="https://www.google.com/maps/place/P.%C2%BA+de+Moret,+1,+28008+Madrid/@40.4340782,-3.7205765,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228404b5836c1:0xc58ca77e477d3aa8!8m2!3d40.4340782!4d-3.7205765!16s%2Fg%2F11c2b7gkg4" target="_blank">Paseo de Moret 1 (Moncloa)</a> at 6.10pm. Click on the icon below for specific location.</p>
         <a class="map-link" href="https://www.google.com/maps/place/P.%C2%BA+de+Moret,+1,+28008+Madrid/@40.4340782,-3.7205765,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228404b5836c1:0xc58ca77e477d3aa8!8m2!3d40.4340782!4d-3.7205765!16s%2Fg%2F11c2b7gkg4" target="_blank">
           <img src="../assets/map-icon2.svg" alt="" srcset="">
         </a>
-        <p>Se ruega puntualidad. Los autobuses saldrán a la hora prevista, y no podrán esperar a los invitados que lleguen con retraso.</p>
-        <p>Para la vuelta a Madrid, facilitaremos autobuses en dos turnos: uno a las 2.30h y otro entre 5.30h y 6h.</p>
-        <p>En la pestaña de RSVP os pedimos que confirméis si utilizaréis el servicio de autobuses.</p>
-        <h3 class="modal-question">Etiqueta</h3>
-        <p>Formal. El evento tendrá lugar mayoritariamente en espacios con hierba, pero facilitaremos protectores de tacones para aquellas mujeres que lleven tacón de aguja.</p>
-        <p>La media de temperaturas que suele hacer en junio en Guadarrama es entre 27 y 30 °C durante el día/tarde, y entre 11 y 15°C por la noche.</p>
-        <p>Sabremos más cerca de la fecha de la boda la previsión meteorológica exacta,  pero recomendamos, sobre todo a las mujeres, que llevéis una chaqueta y un chal para la noche. Habrá un guardarropa para dejar tus pertenencias si no las necesitas en algún momento.</p>
-        <h3 class="modal-question">Regalo de boda</h3>
-        <p>Nuestro mayor regalo es que nos acompañes, pero si quieres contribuir a nuestra luna de miel, puedes hacerlo a través de esta cuenta:</p>
-        <p>ES03 0182 5322 2402 0069 4834</p>
+        <p>We kindly request that you arrive with enough time to the pick-up location. Buses will depart at the foreseen hour and will not be able to wait for those who are late.</p>
+        <p>To return to Madrid there will be two bus services: one at 2.30 am and another one at the end of the night, between 5.30 and 6 am.</p>
+        <p>In the RSVP section we kindly request you to confirm if you will be using the bus service. If you prefer going to or coming back from the wedding at your own pace, there will be parking for private cars and you will always have the option of ordering an Uber.</p>
+        <h3 class="modal-question">Dress code</h3>
+        <p>Formal. For the ladies: the event will take place on grassy lawns. If you plan to wear stilettos, don’t worry because we will provide heel covers for grass.</p>
+        <p>The average temperature in Guadarrama in June is between 27 °C and 30 °C (80 °F – 86 °F) during the day and evening and 11 °C and 15 °C (50 °F – 56 °F) at night.</p>
+        <p>We will have a better sense of the weather forecast as the wedding date draws near, but we recommend that ladies carry a jacket and/or shawl for the night. There will be a cloakroom at the wedding to leave any personal items in case you do not need them.</p>
+        <h3 class="modal-question">Dietary restrictions</h3>
+        <p>If you have any food intolerances, allergies or preferred diets (for pescatarians, vegetarians and vegans), please indicate this in the form included in the RSVP section. </p>
         <h3 class="modal-question">RSVP</h3>
-        <p>Te agradecemos que confirmes tu asistencia en la pestaña de RSVP antes del 5 de mayo de 2023.</p>
+        <p>We would be grateful if you could confirm your attendance before Friday, May 5th, 2023. Please confirm via the form provided in the RSVP section.</p>
       </div>
     </div>
 
     <div class="modal-content">
       <div class="header">
-        <h1>Contacto</h1>
+        <h1>Contact</h1>
         <button value="2" class="close" onclick="closeModal(event)">&times;</button>
       </div>
       <div class="body" style="display: flex; flex-direction: column; align-items: center;">
-        <p style="padding-bottom: 12%;">Para cualquier duda sobre la boda no dudes en llamarnos o escribirnos a:</p>
+        <p style="padding-bottom: 12%;">For any query related to the wedding or any recommendations you might need if you’re coming from outside of Spain, don’t hesitate to call or write to us on the following numbers: </p>
         <p>Paula: <a href="tel:+34619507998">+34 619 507 998</a></p>
         <p>Juan: <a href="tel:+34637127975">+34 637 127 975</a></p>
         <p><a href="mailto:bodapautillo@gmail.com">bodapautillo@gmail.com</a></p>
