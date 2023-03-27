@@ -5,7 +5,6 @@ const app = express();
 const port = process.env.PORT;
 
 app.use(express.json()) 
-app.use(express.static('public'))
 
 const scopes = ['https://www.googleapis.com/auth/spreadsheets'];
 const auth = new google.auth.JWT(
@@ -13,17 +12,15 @@ const auth = new google.auth.JWT(
   null,
   process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
   scopes
-);
+  );
 const sheets = google.sheets({ version: 'v4', auth });
 
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + '/public/')
-});
+app.use("/", express.static(__dirname + '/public/spanish'));
+app.use("/en", express.static(__dirname + '/public/english'));
 
-app.get('/hola', (req, res) => {
-  res.send('buenas')
-})
+app.use('/assets', express.static(__dirname + '/public/assets'));
+  
 
 // Define route handler for form submission
 app.post('/submit-wedding-form', async (req, res) => {
