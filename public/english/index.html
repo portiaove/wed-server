@@ -1,293 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Paula & Juan's Wedding</title>
-  <link rel="icon" type="image/png" href="../assets/flowa-32.png" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Paula & Juan's Wedding</title>
+    <link rel="icon" type="image/png" href="../assets/flowa-32.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
 
-  <div class="invitation-handler">
-    <div class="nav">
-      <button value="1" onClick="openModal(event)">Info</button>
-      <button value="0" onClick="openModal(event)">RSVP</button>
-      <button value="2" onClick="openModal(event)">Contact</button>
-    </div>
-  </div>
-
-  <main class="greetings" >
-    <img id="img-savethedate" src="../assets/saveTheDate2500.webp" alt="">
-    
-    <div class="greetings-title">
-      <h1>Paula & Juan</h1>
-      <h2>June 9<sup>th</sup>, 2023</h2>
-    </div>
-    
-    <div class="greetings-body">
-      <div>
-        <p>We</p>
-        <p>would love</p>
-        <p>for you</p>
-        <p>to join us</p> 
+    <div class="invitation-handler">
+      <div class="nav">
+        <button value="0" onClick="openModal(event)">Info</button>
+        <button value="1" onClick="openModal(event)">Contact</button>
       </div>
-      <button class="btn-welcome" onclick="welcome(event)">
-        Enter >
-      </button>
     </div>
-  </main>
 
-
-  
-  
-  <div class="modal">
-    <div class="modal-content">
-      <div class="header">
-        <h1>RSVP</h1>
-        <button value="0" class="close" onclick="closeModal(event)">&times;</button>
+    <main class="greetings" >
+      <img id="img-savethedate" src="../assets/saveTheDate2500.webp" alt="">
+      
+      <div class="greetings-title">
+        <h1>Paula & Juan</h1>
+        <h2>June 9<sup>th</sup>, 2023</h2>
       </div>
-      <div class="body">
-        <div id="wedFormWrapper">
-          <p>We would be grateful if you could fill out this form to confirm your attendance and help us organize our wedding.</p>
-          <form id="wedForm">
-            <button type="submit" disabled style="display: none" aria-hidden="true"></button>
-            <div>
-              <label class="modal-question" for="name">Please indicate your full name</label>
-              <input placeholder="Name & surname" type="text" name="name" id="name">
-            </div>
-  
-            <div class="form-radio">
-              <p class="modal-question" style="margin-bottom: 0.6em">Will you come to our wedding?</p>
-              <div>
-                <input type="radio" id="attendingY" name="attending" value="Si" onclick="showAttendanceForm()">
-                <label for="attendingY"> Yes </label>
-              </div>
-              <div>
-                <input type="radio" id="attendingN" name="attending" value="No" onclick="hideAttendanceForm()">
-                <label for="attendingN"> No </label>
-              </div>
-            </div>
-            
-            <div id="attendanceForm" style="display: none">
-              <div>
-                <label class="modal-question" for="email">Please provide your email address in case we need to get in touch with you</label>
-                <input type="text" name="email" id="email" placeholder="Email">
-              </div>
-              
-              <div>
-                <label class="modal-question" for="impediments">Do you have any dietary restriction or preference (intolerance, allergy, vegetarian, vegan, pescatarian, etc.)?</label>
-                <input type="text" name="impediments" id="impediments">
-              </div>
-              
-              <div>
-                <p class="modal-question">Will you be using the bus services?</p>
-                <div class="form-radio" style="margin-left: 18px">
-                  <p style="font-size: 26px;">To the wedding</p>
-                  <div>
-                    <input type="radio" id="bus_inY" name="bus_in" value="Si">
-                    <label for="bus_inY"> Yes, leaving from Moncloa at 6.10 pm </label>
-                  </div>
-                  <div>
-                    <input type="radio" id="bus_inN" name="bus_in" value="No">
-                    <label for="bus_inN"> No </label>
-                  </div>
-                </div>
-                
-                <div class="form-radio" style="margin-left: 18px">
-                  <p style="font-size: 26px;">To return to the city</p>
-                  <div>
-                    <input type="radio" id="bus_out1" name="bus_out" value="1">
-                    <label for="bus_out1"> Yes, leaving the venue at 2.30 am </label>
-                  </div>
-                  <div>
-                    <input type="radio" id="bus_out2" name="bus_out" value="2">
-                    <label for="bus_out2"> Yes, leaving the venue between 5.30 and 6 am </label>
-                  </div>
-                  <div>
-                    <input type="radio" id="bus_outN" name="bus_out" value="No">
-                    <label for="bus_outN"> No </label>
-                  </div>
-                </div>
-              </div>
-              
-              <div>
-                <label class="modal-question" for="comments">Please feel free to leave comments or questions you might have and we will get back to you.</label>
-                <input type="text" name="comments" id="comments">
-              </div>
-
-            </div>
-  
-            <button id="submitBtn" type="submit">Send</button>
-          </form>
+      
+      <div class="greetings-body">
+        <div>
+          <p>We</p>
+          <p>would love</p>
+          <p>for you</p>
+          <p>to join us</p> 
         </div>
+        <button class="btn-welcome" onclick="welcome(event)">
+          Enter >
+        </button>
+      </div>
+    </main>
 
-        <div id="wedFormSuccess">
-          <div>
-            <p>We regret that you can’t make it, but we understand and we hope to celebrate with you soon.</p>
-          </div>
-          <div>
-            <h3>Thank you!</h3>
-            <p>We can’t wait to celebrate with you :)</p>
-          </div>
+
+    
+    
+    <div class="modal">
+
+      <div class="modal-content">
+        <div class="header">
+          <h1>Info</h1>
+          <button value="0" class="close" onclick="closeModal(event)">&times;</button>
+        </div>
+        <div class="body">
+          <h3 class="modal-question">When and where?</h3>
+          <p>The wedding will take place on Friday, June 9th, 2023. The civil ceremony will start at around 7 pm and will be followed by a cocktail reception from 8 to 10 pm. A seated dinner will be offered, to be followed by a party from midnight to 6 am.</p>
+          <p>The wedding ceremony and the celebration will take place in Finca <a href="https://www.google.com/maps/place/Finca+Prados+Moros/@40.6557509,-4.0958649,15z/data=!4m6!3m5!1s0xd410c9083866791:0x73d45adc37c29a00!8m2!3d40.6557509!4d-4.0958649!16s%2Fg%2F1tkb6dhs" target="_blank">Prados Moros (M-600, km 02, 28440 Guadarrama, Madrid, Spain)</a>. Click on the icon below for specific location.</p>
+          <a class="map-link" href="https://www.google.com/maps/place/Finca+Prados+Moros/@40.6557509,-4.0958649,15z/data=!4m6!3m5!1s0xd410c9083866791:0x73d45adc37c29a00!8m2!3d40.6557509!4d-4.0958649!16s%2Fg%2F1tkb6dhs" target="_blank">
+            <img src="../assets/map-icon2.svg" alt="" srcset="">
+          </a>
+          <h3 class="modal-question">Transport</h3>
+          <p>We will offer bus services for guests going to and coming back from the wedding. Buses will depart from <a href="https://www.google.com/maps/place/P.%C2%BA+de+Moret,+1,+28008+Madrid/@40.4340782,-3.7205765,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228404b5836c1:0xc58ca77e477d3aa8!8m2!3d40.4340782!4d-3.7205765!16s%2Fg%2F11c2b7gkg4" target="_blank">Paseo de Moret 1 (Moncloa)</a> at 6.10pm. Click on the icon below for specific location.</p>
+          <a class="map-link" href="https://www.google.com/maps/place/P.%C2%BA+de+Moret,+1,+28008+Madrid/@40.4340782,-3.7205765,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228404b5836c1:0xc58ca77e477d3aa8!8m2!3d40.4340782!4d-3.7205765!16s%2Fg%2F11c2b7gkg4" target="_blank">
+            <img src="../assets/map-icon2.svg" alt="" srcset="">
+          </a>
+          <p>We kindly request that you arrive with enough time to the pick-up location. Buses will depart at the foreseen hour and will not be able to wait for those who are late.</p>
+          <p>To return to Madrid there will be two bus services: one at 2.30 am and another one at the end of the night, between 5.30 and 6 am.</p>
+          <p>In the RSVP section we kindly request you to confirm if you will be using the bus service. If you prefer going to or coming back from the wedding at your own pace, there will be parking for private cars and you will always have the option of ordering an Uber.</p>
+          <h3 class="modal-question">Dress code</h3>
+          <p>Formal. For the ladies: the event will take place on grassy lawns. If you plan to wear stilettos, don’t worry because we will provide heel covers for grass.</p>
+          <p>The average temperature in Guadarrama in June is between 27 °C and 30 °C (80 °F – 86 °F) during the day and evening and 11 °C and 15 °C (50 °F – 56 °F) at night.</p>
+          <p>We will have a better sense of the weather forecast as the wedding date draws near, but we recommend that ladies carry a jacket and/or shawl for the night. There will be a cloakroom at the wedding to leave any personal items in case you do not need them.</p>
+          <h3 class="modal-question">Dietary restrictions</h3>
+          <p>If you have any food intolerances, allergies or preferred diets (for pescatarians, vegetarians and vegans), please indicate this in the form included in the RSVP section. </p>
+          <h3 class="modal-question">RSVP</h3>
+          <p>We would be grateful if you could confirm your attendance before Friday, May 5th, 2023. Please confirm via the form provided in the RSVP section.</p>
+        </div>
+      </div>
+
+      <div class="modal-content">
+        <div class="header">
+          <h1>Contact</h1>
+          <button value="1" class="close" onclick="closeModal(event)">&times;</button>
+        </div>
+        <div class="body" style="display: flex; flex-direction: column; align-items: center;">
+          <p style="padding-bottom: 12%;">For any query related to the wedding or any recommendations you might need if you’re coming from outside of Spain, don’t hesitate to call or write to us on the following numbers: </p>
+          <p>Paula: <a href="tel:+34619507998">+34 619 507 998</a></p>
+          <p>Juan: <a href="tel:+34637127975">+34 637 127 975</a></p>
+          <p><a href="mailto:bodapautillo@gmail.com">bodapautillo@gmail.com</a></p>
         </div>
       </div>
     </div>
 
-    <div class="modal-content">
-      <div class="header">
-        <h1>Info</h1>
-        <button value="1" class="close" onclick="closeModal(event)">&times;</button>
-      </div>
-      <div class="body">
-        <h3 class="modal-question">When and where?</h3>
-        <p>The wedding will take place on Friday, June 9th, 2023. The civil ceremony will start at around 7 pm and will be followed by a cocktail reception from 8 to 10 pm. A seated dinner will be offered, to be followed by a party from midnight to 6 am.</p>
-        <p>The wedding ceremony and the celebration will take place in Finca <a href="https://www.google.com/maps/place/Finca+Prados+Moros/@40.6557509,-4.0958649,15z/data=!4m6!3m5!1s0xd410c9083866791:0x73d45adc37c29a00!8m2!3d40.6557509!4d-4.0958649!16s%2Fg%2F1tkb6dhs" target="_blank">Prados Moros (M-600, km 02, 28440 Guadarrama, Madrid, Spain)</a>. Click on the icon below for specific location.</p>
-        <a class="map-link" href="https://www.google.com/maps/place/Finca+Prados+Moros/@40.6557509,-4.0958649,15z/data=!4m6!3m5!1s0xd410c9083866791:0x73d45adc37c29a00!8m2!3d40.6557509!4d-4.0958649!16s%2Fg%2F1tkb6dhs" target="_blank">
-          <img src="../assets/map-icon2.svg" alt="" srcset="">
-        </a>
-        <h3 class="modal-question">Transport</h3>
-        <p>We will offer bus services for guests going to and coming back from the wedding. Buses will depart from <a href="https://www.google.com/maps/place/P.%C2%BA+de+Moret,+1,+28008+Madrid/@40.4340782,-3.7205765,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228404b5836c1:0xc58ca77e477d3aa8!8m2!3d40.4340782!4d-3.7205765!16s%2Fg%2F11c2b7gkg4" target="_blank">Paseo de Moret 1 (Moncloa)</a> at 6.10pm. Click on the icon below for specific location.</p>
-        <a class="map-link" href="https://www.google.com/maps/place/P.%C2%BA+de+Moret,+1,+28008+Madrid/@40.4340782,-3.7205765,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228404b5836c1:0xc58ca77e477d3aa8!8m2!3d40.4340782!4d-3.7205765!16s%2Fg%2F11c2b7gkg4" target="_blank">
-          <img src="../assets/map-icon2.svg" alt="" srcset="">
-        </a>
-        <p>We kindly request that you arrive with enough time to the pick-up location. Buses will depart at the foreseen hour and will not be able to wait for those who are late.</p>
-        <p>To return to Madrid there will be two bus services: one at 2.30 am and another one at the end of the night, between 5.30 and 6 am.</p>
-        <p>In the RSVP section we kindly request you to confirm if you will be using the bus service. If you prefer going to or coming back from the wedding at your own pace, there will be parking for private cars and you will always have the option of ordering an Uber.</p>
-        <h3 class="modal-question">Dress code</h3>
-        <p>Formal. For the ladies: the event will take place on grassy lawns. If you plan to wear stilettos, don’t worry because we will provide heel covers for grass.</p>
-        <p>The average temperature in Guadarrama in June is between 27 °C and 30 °C (80 °F – 86 °F) during the day and evening and 11 °C and 15 °C (50 °F – 56 °F) at night.</p>
-        <p>We will have a better sense of the weather forecast as the wedding date draws near, but we recommend that ladies carry a jacket and/or shawl for the night. There will be a cloakroom at the wedding to leave any personal items in case you do not need them.</p>
-        <h3 class="modal-question">Dietary restrictions</h3>
-        <p>If you have any food intolerances, allergies or preferred diets (for pescatarians, vegetarians and vegans), please indicate this in the form included in the RSVP section. </p>
-        <h3 class="modal-question">RSVP</h3>
-        <p>We would be grateful if you could confirm your attendance before Friday, May 5th, 2023. Please confirm via the form provided in the RSVP section.</p>
-      </div>
-    </div>
-
-    <div class="modal-content">
-      <div class="header">
-        <h1>Contact</h1>
-        <button value="2" class="close" onclick="closeModal(event)">&times;</button>
-      </div>
-      <div class="body" style="display: flex; flex-direction: column; align-items: center;">
-        <p style="padding-bottom: 12%;">For any query related to the wedding or any recommendations you might need if you’re coming from outside of Spain, don’t hesitate to call or write to us on the following numbers: </p>
-        <p>Paula: <a href="tel:+34619507998">+34 619 507 998</a></p>
-        <p>Juan: <a href="tel:+34637127975">+34 637 127 975</a></p>
-        <p><a href="mailto:bodapautillo@gmail.com">bodapautillo@gmail.com</a></p>
-      </div>
-    </div>
-  </div>
 
 
+    <script>
 
-  <script>
+      const modalColors = ['#b9c2b3', '#afbdc5', '#ffb367']
 
-    const modalColors = ['#b9c2b3', '#afbdc5', '#ffb367']
+      const welcome = () => {
+        event.preventDefault()
 
-    const welcome = () => {
-      event.preventDefault()
-
-      const [greetings] = document.getElementsByClassName('greetings')
-      const [invitation] = document.getElementsByClassName('invitation-handler')
-      
-      greetings.style.display = 'none'
-      invitation.style.display = 'block'
-    }
-
-    const openModal = (event) => {
-      event.preventDefault()
-      const { value } = event.target
-  
-      const [modal] = document.getElementsByClassName('modal')
-      const selectedModalContent = modal.children[value]
-
-      modal.classList.toggle('opaque')
-      modal.style.backgroundColor = modalColors[value]
-      selectedModalContent.style.display = 'block'
-    }
-    
-    const closeModal = (event) => {
-      event.preventDefault()
-      const { value } = event.target
-      
-      const [modal] = document.getElementsByClassName('modal')
-      const selectedModalContent = modal.children[value]
-      
-      modal.classList.toggle('opaque')
-      selectedModalContent.style.display = 'none'
-      resetFormLayout()
-    }
-    
-    const showAttendanceForm = () => {
-      const otherInputs = document.getElementById("attendanceForm");
-      otherInputs.style.display = "block";
-      showSubmitBtn()
-    }
-
-    const hideAttendanceForm = () => {
-      const otherInputs = document.getElementById("attendanceForm");
-      otherInputs.style.display = "none";
-      showSubmitBtn()
-    }
-    
-    const showSubmitBtn = () => {
-      const submitBtn = document.getElementById("submitBtn")
-      submitBtn.style.display = "block"
-    }
-    
-    const resetFormLayout = () => {
-      const otherInputs = document.getElementById("attendanceForm");
-      const submitBtn = document.getElementById("submitBtn")
-      const wedFormSuccess = document.getElementById('wedFormSuccess')
-      const wedFormWrapper = document.getElementById('wedFormWrapper')
-      const sadMessage = wedFormSuccess.children[0]
-      const happyMessage = wedFormSuccess.children[1]
-
-      wedFormWrapper.style.display = "block"
-      otherInputs.style.display = "none";
-      submitBtn.style.display = "none"
-      wedFormSuccess.style.display = "none"
-      sadMessage.style.display = "none"
-      happyMessage.style.display = "none"
-
-    }
-
-    const form = document.querySelector('#wedForm')
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const formData = new FormData(form);
-      const formDataObject = {};
-
-      for (let [key, value] of formData.entries()) {
-        formDataObject[key] = value;
-      }
-      console.log(formDataObject)
-      const response = await fetch('/submit-wedding-form', {
-        method: 'POST',
-        body: JSON.stringify(formDataObject),
-        headers: {"Content-type": "application/json;charset=UTF-8"}
-      });
-      if (response.ok) {
-        form.reset();
-        const wedFormSuccess = document.getElementById('wedFormSuccess')
-        const wedFormWrapper = document.getElementById('wedFormWrapper')
-        wedFormWrapper.style.display = "none"
-        wedFormSuccess.style.display = "block"
+        const [greetings] = document.getElementsByClassName('greetings')
+        const [invitation] = document.getElementsByClassName('invitation-handler')
         
-        if (formDataObject.attending === "No") {
-          const sadMessage = wedFormSuccess.children[0]
-          sadMessage.style.display = "block"
-        } else {
-          const happyMessage = wedFormSuccess.children[1]
-          happyMessage.style.display = "block"
-        }
-      } else {
-        const error = await response.json();
-        console.log(`Error: ${error.message}`);
+        greetings.style.display = 'none'
+        invitation.style.display = 'block'
       }
-    });
-  </script>
-</body>
+
+      const openModal = (event) => {
+        event.preventDefault()
+        const { value } = event.target
+    
+        const [modal] = document.getElementsByClassName('modal')
+        const selectedModalContent = modal.children[value]
+
+        modal.classList.toggle('opaque')
+
+        const colorIdx = Math.floor(Math.random() * modalColors.length);
+        modal.style.backgroundColor = modalColors[colorIdx]
+        selectedModalContent.style.display = 'block'
+      }
+      
+      const closeModal = (event) => {
+        event.preventDefault()
+        const { value } = event.target
+        
+        const [modal] = document.getElementsByClassName('modal')
+        const selectedModalContent = modal.children[value]
+        
+        modal.classList.toggle('opaque')
+        selectedModalContent.style.display = 'none'
+      }
+      
+    </script>
+  </body>
 </html>
