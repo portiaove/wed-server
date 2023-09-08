@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Boda Paula y Juan</title>
     <link rel="icon" type="image/png" href="../assets/flowa-32.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-
     <div class="invitation-handler">
       <div class="nav">
         <button value="0" onClick="openModal(event)">Info</button>
@@ -17,59 +16,114 @@
       </div>
     </div>
 
-    <main class="greetings" >
-      <img id="img-savethedate" src="../assets/saveTheDate2500.webp" alt="">
-      
+    <main class="greetings">
+      <img id="img-savethedate" src="../assets/saveTheDate2500.webp" alt="" />
+
       <div class="greetings-title">
         <h1>Paula & Juan</h1>
         <h2>9 de junio, 2023</h2>
       </div>
-      
+
       <div class="greetings-body">
         <div>
           <p>Nos</p>
           <p>encantaría</p>
           <p>que nos</p>
-          <p>acompañases</p> 
+          <p>acompañases</p>
         </div>
-        <button class="btn-welcome" onclick="welcome(event)">
-          Entrar >
-        </button>
+        <button class="btn-welcome" onclick="welcome(event)">Entrar ></button>
       </div>
     </main>
 
-
-    
-    
     <div class="modal">
       <div class="modal-content">
         <div class="header">
           <h1>Info</h1>
-          <button value="0" class="close" onclick="closeModal(event)">&times;</button>
+          <button value="0" class="close" onclick="closeModal(event)">
+            &times;
+          </button>
         </div>
         <div class="body">
           <h3 class="modal-question">Fecha y Lugar</h3>
-          <p>La boda tendrá lugar el viernes 9 de junio de 2023. La ceremonia civil dará comienzo alrededor de las 19h, seguida de un cóctel y de una cena.</p>
-          <p>Tanto la ceremonia civil, como la celebración posterior, tendrán lugar en la finca <a href="https://www.google.com/maps/place/Finca+Prados+Moros/@40.6557509,-4.0958649,15z/data=!4m6!3m5!1s0xd410c9083866791:0x73d45adc37c29a00!8m2!3d40.6557509!4d-4.0958649!16s%2Fg%2F1tkb6dhs" target="_blank">Prados Moros (M-600, km 02, 28440 Guadarrama, Madrid, España)</a>.</p>
-          <a class="map-link" href="https://www.google.com/maps/place/Finca+Prados+Moros/@40.6557509,-4.0958649,15z/data=!4m6!3m5!1s0xd410c9083866791:0x73d45adc37c29a00!8m2!3d40.6557509!4d-4.0958649!16s%2Fg%2F1tkb6dhs" target="_blank">
-            <img src="../assets/map-icon2.svg" alt="" srcset="">
+          <p>
+            La boda tendrá lugar el viernes 9 de junio de 2023. La ceremonia
+            civil dará comienzo alrededor de las 19h, seguida de un cóctel y de
+            una cena.
+          </p>
+          <p>
+            Tanto la ceremonia civil, como la celebración posterior, tendrán
+            lugar en la finca
+            <a
+              href="https://www.google.com/maps/place/Finca+Prados+Moros/@40.6557509,-4.0958649,15z/data=!4m6!3m5!1s0xd410c9083866791:0x73d45adc37c29a00!8m2!3d40.6557509!4d-4.0958649!16s%2Fg%2F1tkb6dhs"
+              target="_blank"
+              >Prados Moros (M-600, km 02, 28440 Guadarrama, Madrid, España)</a
+            >.
+          </p>
+          <a
+            class="map-link"
+            href="https://www.google.com/maps/place/Finca+Prados+Moros/@40.6557509,-4.0958649,15z/data=!4m6!3m5!1s0xd410c9083866791:0x73d45adc37c29a00!8m2!3d40.6557509!4d-4.0958649!16s%2Fg%2F1tkb6dhs"
+            target="_blank"
+          >
+            <img src="../assets/map-icon2.svg" alt="" srcset="" />
           </a>
           <h3 class="modal-question">Traslado</h3>
-          <p>Facilitaremos autobuses para ir a la finca Prados Moros que saldrán desde <a href="https://www.google.com/maps/place/P.%C2%BA+de+Moret,+1,+28008+Madrid/@40.4340782,-3.7205765,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228404b5836c1:0xc58ca77e477d3aa8!8m2!3d40.4340782!4d-3.7205765!16s%2Fg%2F11c2b7gkg4" target="_blank">Paseo de Moret 1 (Moncloa)</a> a las 18.10h.</p>
-          <a class="map-link" href="https://www.google.com/maps/place/P.%C2%BA+de+Moret,+1,+28008+Madrid/@40.4340782,-3.7205765,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228404b5836c1:0xc58ca77e477d3aa8!8m2!3d40.4340782!4d-3.7205765!16s%2Fg%2F11c2b7gkg4" target="_blank">
-            <img src="../assets/map-icon2.svg" alt="" srcset="">
+          <p>
+            Facilitaremos autobuses para ir a la finca Prados Moros que saldrán
+            desde
+            <a
+              href="https://www.google.com/maps/place/P.%C2%BA+de+Moret,+1,+28008+Madrid/@40.4340782,-3.7205765,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228404b5836c1:0xc58ca77e477d3aa8!8m2!3d40.4340782!4d-3.7205765!16s%2Fg%2F11c2b7gkg4"
+              target="_blank"
+              >Paseo de Moret 1 (Moncloa)</a
+            >
+            a las 18.10h.
+          </p>
+          <a
+            class="map-link"
+            href="https://www.google.com/maps/place/P.%C2%BA+de+Moret,+1,+28008+Madrid/@40.4340782,-3.7205765,17z/data=!3m1!4b1!4m6!3m5!1s0xd4228404b5836c1:0xc58ca77e477d3aa8!8m2!3d40.4340782!4d-3.7205765!16s%2Fg%2F11c2b7gkg4"
+            target="_blank"
+          >
+            <img src="../assets/map-icon2.svg" alt="" srcset="" />
           </a>
-          <p>Se ruega puntualidad. Los autobuses saldrán a la hora prevista, y no podrán esperar a los invitados que lleguen con retraso.</p>
-          <p>Para la vuelta a Madrid, facilitaremos autobuses en dos turnos: uno a las 2.30h y otro entre 5.30h y 6h.</p>
-          <p>En la pestaña de RSVP os pedimos que confirméis si utilizaréis el servicio de autobuses.</p>
+          <p>
+            Se ruega puntualidad. Los autobuses saldrán a la hora prevista, y no
+            podrán esperar a los invitados que lleguen con retraso.
+          </p>
+          <p>
+            Para la vuelta a Madrid, facilitaremos autobuses en dos turnos: uno
+            a las 2.30h y otro entre 5.30h y 6h.
+          </p>
+          <p>
+            En la pestaña de RSVP os pedimos que confirméis si utilizaréis el
+            servicio de autobuses.
+          </p>
           <h3 class="modal-question">Etiqueta</h3>
-          <p>Formal. El evento tendrá lugar mayoritariamente en espacios con hierba, pero facilitaremos protectores de tacones para aquellas mujeres que lleven tacón de aguja.</p>
-          <p>La media de temperaturas que suele hacer en junio en Guadarrama es entre 27 y 30 °C durante el día/tarde, y entre 11 y 15°C por la noche.</p>
-          <p>Sabremos más cerca de la fecha de la boda la previsión meteorológica exacta,  pero recomendamos, sobre todo a las mujeres, que llevéis una chaqueta y un chal para la noche. Habrá un guardarropa para dejar tus pertenencias si no las necesitas en algún momento.</p>
+          <p>
+            Formal. El evento tendrá lugar mayoritariamente en espacios con
+            hierba, pero facilitaremos protectores de tacones para aquellas
+            mujeres que lleven tacón de aguja.
+          </p>
+          <p>
+            La media de temperaturas que suele hacer en junio en Guadarrama es
+            entre 27 y 30 °C durante el día/tarde, y entre 11 y 15°C por la
+            noche.
+          </p>
+          <p>
+            Sabremos más cerca de la fecha de la boda la previsión meteorológica
+            exacta, pero recomendamos, sobre todo a las mujeres, que llevéis una
+            chaqueta y un chal para la noche. Habrá un guardarropa para dejar
+            tus pertenencias si no las necesitas en algún momento.
+          </p>
           <h3 class="modal-question">RSVP</h3>
-          <p>Te agradecemos que confirmes tu asistencia en la pestaña de RSVP antes del 5 de mayo de 2023.</p>
+          <p>
+            Te agradecemos que confirmes tu asistencia en la pestaña de RSVP
+            antes del 5 de mayo de 2023.
+          </p>
           <h3 class="modal-question">Regalo de boda</h3>
-          <p>Nuestro mayor regalo es que nos acompañes, pero si quieres contribuir a nuestra luna de miel, puedes hacerlo a través de esta cuenta:</p>
+          <p>
+            Nuestro mayor regalo es que nos acompañes, pero si quieres
+            contribuir a nuestra luna de miel, puedes hacerlo a través de esta
+            cuenta:
+          </p>
           <p>ES03 0182 5322 2402 0069 4834</p>
         </div>
       </div>
@@ -77,58 +131,65 @@
       <div class="modal-content">
         <div class="header">
           <h1>Contacto</h1>
-          <button value="1" class="close" onclick="closeModal(event)">&times;</button>
+          <button value="1" class="close" onclick="closeModal(event)">
+            &times;
+          </button>
         </div>
-        <div class="body" style="display: flex; flex-direction: column; align-items: center;">
-          <p style="padding-bottom: 12%;">Para cualquier duda sobre la boda no dudes en llamarnos o escribirnos a:</p>
+        <div
+          class="body"
+          style="display: flex; flex-direction: column; align-items: center"
+        >
+          <p style="padding-bottom: 12%">
+            Para cualquier duda sobre la boda no dudes en llamarnos o
+            escribirnos a:
+          </p>
           <p>Paula: <a href="tel:+34619507998">+34 619 507 998</a></p>
           <p>Juan: <a href="tel:+34637127975">+34 637 127 975</a></p>
-          <p><a href="mailto:bodapautillo@gmail.com">bodapautillo@gmail.com</a></p>
+          <p>
+            <a href="mailto:bodapautillo@gmail.com">bodapautillo@gmail.com</a>
+          </p>
         </div>
       </div>
     </div>
 
-
-
     <script>
-
-      const modalColors = ['#b9c2b3', '#afbdc5', '#ffb367']
+      const modalColors = ["#b9c2b3", "#afbdc5", "#ffb367"];
 
       const welcome = () => {
-        event.preventDefault()
+        event.preventDefault();
 
-        const [greetings] = document.getElementsByClassName('greetings')
-        const [invitation] = document.getElementsByClassName('invitation-handler')
-        
-        greetings.style.display = 'none'
-        invitation.style.display = 'block'
-      }
+        const [greetings] = document.getElementsByClassName("greetings");
+        const [invitation] =
+          document.getElementsByClassName("invitation-handler");
+
+        greetings.style.display = "none";
+        invitation.style.display = "block";
+      };
 
       const openModal = (event) => {
-        event.preventDefault()
-        const { value } = event.target
-    
-        const [modal] = document.getElementsByClassName('modal')
-        const selectedModalContent = modal.children[value]
+        event.preventDefault();
+        const { value } = event.target;
 
-        modal.classList.toggle('opaque')
+        const [modal] = document.getElementsByClassName("modal");
+        const selectedModalContent = modal.children[value];
+
+        modal.classList.toggle("opaque");
 
         const colorIdx = Math.floor(Math.random() * modalColors.length);
-        modal.style.backgroundColor = modalColors[colorIdx]
-        selectedModalContent.style.display = 'block'
-      }
-      
-      const closeModal = (event) => {
-        event.preventDefault()
-        const { value } = event.target
-        
-        const [modal] = document.getElementsByClassName('modal')
-        const selectedModalContent = modal.children[value]
-        
-        modal.classList.toggle('opaque')
-        selectedModalContent.style.display = 'none'
-      }
+        modal.style.backgroundColor = modalColors[colorIdx];
+        selectedModalContent.style.display = "block";
+      };
 
+      const closeModal = (event) => {
+        event.preventDefault();
+        const { value } = event.target;
+
+        const [modal] = document.getElementsByClassName("modal");
+        const selectedModalContent = modal.children[value];
+
+        modal.classList.toggle("opaque");
+        selectedModalContent.style.display = "none";
+      };
     </script>
   </body>
 </html>
